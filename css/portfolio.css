@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
+
+/* General Reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1e2a38;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #3db4f2;
+    --background-color: #1e2a38;
+    --navbar-color: #0d1b2a;
+    --text-shadow: 0px 0px 10px white, 0px 0px 20px white;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: var(--navbar-color);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Person Section */
+.person {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../image/abhijit.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.person h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.person p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.person .btn {
+    padding: 10px 25px;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about p {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 250px; 
+    height: 350px; 
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color:  #1e2a38;
+}
+
+.card h1 {
+    color: rgb(55, 22, 215);
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 100;
+    transition: 0.5s;
+}
+
+.card:hover h1 {
+    font-size: 30px;
+    text-shadow:#00acee 0px 0px 10px;
+}
+
+.card .hover-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.6s, top 0.6s;
+}
+
+.card:hover .hover-image {
+    top: 35%;
+    opacity: 1;
+}
+
+.portfolio a{
+    text-decoration: none;
+}
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .card {
+        width: 90%; 
+        margin: 0 auto;
+    }
+}
+
+/* Contact Section */
+.portfolio h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.contactbg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 800px;
+}
+
+/* WhatsApp Chat */
+.wchat {
+    display: flex;
+    position: fixed;
+    width: 200px;
+    height: 80px;
+    bottom: 70px;
+    right: 10px;
+    z-index: 100;
+    justify-content: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .person h1 {
+        font-size: 2rem;
+    }
+
+    .about h2, .skills h2, .portfolio h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+/* Social Icons */
+/* From Uiverse.io by 0800Gonza */ 
+.social-card {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 1s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128c7e;
+    transition-duration: 0.3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+ 
+  
